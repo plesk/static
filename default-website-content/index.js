@@ -2,6 +2,7 @@
 
 import Mustache from 'mustache'
 import content from './content.mustache';
+import './gtm';
 
 document.addEventListener('DOMContentLoaded', function () {
     document.write(
