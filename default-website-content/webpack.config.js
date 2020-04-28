@@ -49,8 +49,12 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
             {
                 test: /\.css$/,
                 use: [
-                    fileLoader,
-                    'extract-loader',
+                    {
+                        loader: 'style-loader',
+                        options: {
+                            injectType: 'lazyStyleTag',
+                        },
+                    },
                     'css-loader',
                 ],
             },
