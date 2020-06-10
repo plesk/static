@@ -1,9 +1,9 @@
 // Copyright 1999-2020. Plesk International GmbH. All rights reserved.
 
-import { Firehose } from '@aws-sdk/client-firehose-browser';
+import Firehose from 'aws-sdk/clients/firehose';
 
 if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector;
+  Element.prototype.matches = Element.prototype.msMatchesSelector;
 }
 
 const getElement = event => {
