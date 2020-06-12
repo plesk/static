@@ -28,6 +28,25 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
     module: {
         rules: [
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    targets: {
+                                        ie: '11',
+                                    },
+                                },
+                            ],
+                        ],
+                    },
+                },
+            },
+            {
                 test: /\.mustache$/,
                 exclude: /node_modules/,
                 use: {

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
     "css-loader": "^3.4.1",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
@@ -17,7 +20,7 @@
     "start": "webpack-dev-server --env.development"
   },
   "dependencies": {
-    "@aws-sdk/client-firehose-browser": "^0.1.0-preview.2",
+    "aws-sdk": "^2.693.0",
     "mustache": "^3.2.1"
   }
 }
