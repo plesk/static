@@ -10,17 +10,20 @@ const fileLoader = {
     },
 };
 
+const getPublicPath = env => env.production
+    ? 'https://assets.plesk.com/static/default-website-content/public/'
+    : 'http://localhost:8080/public/';
+
 module.exports = env => (['default-website-index', 'default-server-index'].map(entry => ({
     mode: 'none',
     entry: {
         [entry]: './index.js',
+        'bundle': './content.js',
     },
     output: {
         path: path.join(__dirname, 'public'),
         filename: '[name].js',
-        publicPath: env.production
-            ? 'https://assets.plesk.com/static/default-website-content/public/'
-            : 'http://localhost:8080/public/',
+        publicPath: getPublicPath(env),
     },
     optimization: {
         minimize: true,
@@ -68,12 +71,7 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
             {
                 test: /\.css$/,
                 use: [
-                    {
-                        loader: 'style-loader',
-                        options: {
-                            injectType: 'lazyStyleTag',
-                        },
-                    },
+                    'to-string-loader',
                     'css-loader',
                 ],
             },
@@ -82,6 +80,7 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
     plugins: [
         new webpack.DefinePlugin({
             __DOMAIN_PAGE__: 'default-website-index' === entry,
+            __PUBLIC_PATH__: JSON.stringify(getPublicPath(env)),
         }),
     ],
     devServer: {
