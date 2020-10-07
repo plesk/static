@@ -31,10 +31,7 @@ html {
 
 body {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 320px;
+    min-width: 280px;
     min-height: 100vh;
     font-size: 14px;
     line-height: 1.714em;
@@ -46,10 +43,11 @@ body {
 }
 
 a {
-    color: #53bce6;
+    color: #03ade4;
     text-decoration: none;
     cursor: pointer;
     background-color: transparent;
+    transition: 0.25s ease-in-out;
 }
 
 a:active,
@@ -58,7 +56,7 @@ a:hover {
 }
 
 a:hover {
-    color: #03ade4;
+    color: #259ccc;
 }
 
 p,
@@ -205,15 +203,16 @@ ul {
 .resources-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 0 0;
+    padding: 16px 0 0;
     list-style: none;
     justify-content: space-around;
 }
 
 .resources-list__item {
-    flex: none;
+    flex: 1 1 33%;
     min-width: 0;
-    padding: 10px;
+    padding: 16px 0;
+    box-sizing: border-box;
     text-align: center;
 }
 
@@ -229,6 +228,21 @@ ul {
     width: 48px;
     height: 48px;
     transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .columns {
+        display: flex;
+    }
+
+    .columns__column {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .resources-list__item > a {
+        margin-left: 50px;
+    }
 }
 
 .footer {
@@ -254,4 +268,28 @@ ul {
     padding: 20px;
     max-width: 640px;
     text-align: center;
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 20px;
+    line-height: 20px;
+    border: 1px solid #53bce6;
+    border-radius: 4px;
+    background-color: #eef8fc;
+}
+
+.icon-button:hover {
+    background-color: #ddf2fb;
+}
+
+.icon-button__icon {
+    margin: -2px 8px -8px 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
