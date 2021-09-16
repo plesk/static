@@ -126,6 +126,23 @@ ul {
     background-size: contain;
 }
 
+.note__link {
+    display: inline-flex;
+    align-items: flex-start;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.note__icon {
+    margin: 2px 4px 0 0;
+    opacity: 0.7;
+}
+
+.note__link:hover .note__icon {
+    opacity: 1;
+}
+
 .note__button {
     display: inline-block;
     margin-left: 8px;
@@ -177,9 +194,21 @@ ul {
     }
 
     .note {
-        padding: 24px;
+        padding: 18px 24px;
         font-size: 18px;
         line-height: 28px;
+    }
+
+    .note__link {
+        display: inline-flex;
+        align-items: flex-start;
+        margin-top: 4px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .note__icon {
+        margin-top: 4px;
     }
 
     .note__button {
