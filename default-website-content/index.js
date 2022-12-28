@@ -1,4 +1,4 @@
-// Copyright 1999-2020. Plesk International GmbH. All rights reserved.
+// Copyright 1999-2022. Plesk International GmbH. All rights reserved.
 
 import Mustache from 'mustache';
 import content from './content.mustache';
