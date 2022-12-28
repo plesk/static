@@ -3,25 +3,25 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.4.1",
-    "file-loader": "^5.0.2",
-    "html-loader": "^0.5.5",
-    "style-loader": "^1.2.0",
-    "to-string-loader": "^1.1.6",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "to-string-loader": "^1.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "build": "webpack --env.production",
-    "dev": "webpack --env.development --watch",
-    "start": "webpack-dev-server --env.development"
+    "build": "webpack --env production",
+    "dev": "webpack --env development --watch",
+    "start": "webpack serve --env development --static ."
   },
   "dependencies": {
-    "aws-sdk": "^2.693.0",
-    "mustache": "^3.2.1"
+    "aws-sdk": "^2.1282.0",
+    "mustache": "^4.2.0"
   }
 }

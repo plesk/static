@@ -1,14 +1,7 @@
 // Copyright 1999-2020. Plesk International GmbH. All rights reserved.
 const path = require('path');
 const webpack = require('webpack');
-
-const fileLoader = {
-    loader: 'file-loader',
-    options: {
-        name: '[path][name]-[hash:6].[ext]',
-        esModule: false,
-    },
-};
+const TerserPlugin = require('terser-webpack-plugin');
 
 const getPublicPath = env => env.production
     ? 'https://assets.plesk.com/static/default-website-content/public/'
@@ -27,6 +20,11 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
     },
     optimization: {
         minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+            }),
+        ],
     },
     module: {
         rules: [
@@ -54,19 +52,14 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
                 exclude: /node_modules/,
                 use: {
                     loader: 'html-loader',
-                    options: {
-                        minimize: true,
-                        ignoreCustomFragments: [ /{{.*?}}/ ],
-                        attrs: [
-                            'img:src',
-                            'link:href',
-                        ],
-                    },
                 },
             },
             {
                 test: /\.(svg|png|ico|woff2?)$/,
-                use: fileLoader,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[path][name]-[hash:6][ext]',
+                },
             },
             {
                 test: /\.css$/,
@@ -83,9 +76,4 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
             __PUBLIC_PATH__: JSON.stringify(getPublicPath(env)),
         }),
     ],
-    devServer: {
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        },
-    },
 })));
