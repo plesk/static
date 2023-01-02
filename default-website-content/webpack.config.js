@@ -64,7 +64,6 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
             {
                 test: /\.css$/,
                 use: [
-                    'to-string-loader',
                     'css-loader',
                 ],
             },
