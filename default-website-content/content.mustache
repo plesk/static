@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="preload" href="fonts/lato-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <style type="text/css">
         {{&styles}}
     </style>
@@ -23,13 +23,13 @@
         <div class="header__inner">
             <div class="header__content">
                 <a class="header__logo" href="https://www.plesk.com" target="_blank" data-id="logo-link">
-                    <img src="img/logo.svg" width="98" height="41" alt="Plesk">
+                    <img src="img/logo.svg" width="97" height="40" alt="Plesk">
                 </a>
 {{#domain_page}}
                 <h1 class="header__title">
                     This is a default webpage generated for<br>
                     <a href="{{domain_link}}" data-id="domain-link">{{domain_name}}</a>
-                    by Plesk.
+                    by Plesk
                 </h1>
                 <div class="header__message">
                     <p>If you are the website owner:</p>
@@ -51,11 +51,8 @@
 {{#plesk_login}}
                 <div class="note">
                     <div class="note__message">
-                        <div>Log in to Plesk to create websites and set up hosting.</div>
-                        <a class="note__link" href="https://support.plesk.com/hc/en-us/articles/213413369-How-to-log-in-to-Plesk-" target="_blank" rel="nofollow noopener noreferrer" data-id="howtologin">
-                            <img class="note__icon" src="img/question-mark-circle.svg" alt="">
-                            New to Plesk? Learn how to log in and start working with it.
-                        </a>
+                        <p class="note__message-lead">Log in to Plesk to create websites and set up hosting.</p>
+                        <p>New to Plesk? <a class="note__link" href="https://support.plesk.com/hc/en-us/articles/213413369-How-to-log-in-to-Plesk-" target="_blank" rel="nofollow noopener noreferrer" data-id="howtologin">Learn how</a> to log in and start working with it.</p>
                     </div>
                     <a class="note__button" href="{{plesk_login}}" data-id="plesk-login">Log in to Plesk</a>
                 </div>
@@ -73,47 +70,46 @@
                         with simple and secure web server, website and web apps management tools. It is specially designed to help web professionals manage web,
                         DNS, mail and other services through a comprehensive and user-friendly GUI. Plesk is about intelligently managing servers, apps,
                         websites and hosting businesses, on both traditional and cloud hosting.</p>
-                    <a class="icon-button" href="https://docs.plesk.com/try-plesk-now/" target="_blank" rel="nofollow noopener noreferrer" data-id="try-plesk">
-                        <img class="icon-button__icon" src="img/try-online-demo.svg" alt="Try Online Demo">
+                    <a class="content__button" href="https://docs.plesk.com/try-plesk-now/" target="_blank" rel="nofollow noopener noreferrer" data-id="try-plesk">
                         <span>Try Online Demo</span>
                     </a>
                 </div>
                 <div class="columns__column">
                     <ul class="resources-list">
                         <li class="resources-list__item">
-                            <a class="plesk-guides" href="https://docs.plesk.com/en-US/obsidian/" target="_blank" rel="nofollow noopener noreferrer" data-id="plesk-guides">
-                                <img class="icon" src="img/plesk-guides.svg" alt="Plesk Guides">
-                                <span>Plesk Guides</span>
+                            <a class="plesk-guides" href="https://docs.plesk.com/en-US/obsidian/" target="_blank" rel="noopener noreferrer" data-id="plesk-guides">
+                                <span class="resources-list__icon"><svg focusable="false" aria-hidden="true"><use xlink:href="img/symbols.svg#guides"></use></svg></span>
+                                <span class="resources-list__text" lang="en">Plesk Guides</span>
                             </a>
                         </li>
                         <li class="resources-list__item">
-                            <a href="https://support.plesk.com/hc/en-us" target="_blank" rel="nofollow noopener noreferrer" data-id="knowledge-base">
-                                <img class="icon" src="img/knowlede-base.svg" alt="Knowledge Base">
-                                <span>Knowledge Base</span>
+                            <a href="https://support.plesk.com/hc/en-us" target="_blank" rel="noopener noreferrer" data-id="knowledge-base">
+                                <span class="resources-list__icon"><svg focusable="false" aria-hidden="true"><use xlink:href="img/symbols.svg#kb"></use></svg></span>
+                                <span class="resources-list__text" lang="en">Knowledge Base</span>
                             </a>
                         </li>
                         <li class="resources-list__item">
-                            <a href="https://talk.plesk.com/" target="_blank" data-id="forum">
-                                <img class="icon" src="img/forum.svg" alt="Forum">
-                                <span>Forum</span>
+                            <a href="https://talk.plesk.com/" target="_blank" rel="noopener noreferrer" data-id="forum">
+                                <span class="resources-list__icon"><svg focusable="false" aria-hidden="true"><use xlink:href="img/symbols.svg#forum"></use></svg></span>
+                                <span class="resources-list__text" lang="en">Forum</span>
                             </a>
                         </li>
                         <li class="resources-list__item">
-                            <a href="https://www.plesk.com/blog/" target="_blank" rel="nofollow noopener noreferrer" data-id="developer-blog">
-                                <img class="icon" src="img/developers-blog.svg" alt="Developer Blog">
-                                <span>Developer Blog</span>
+                            <a href="https://www.plesk.com/blog/" target="_blank" rel="noopener noreferrer" data-id="developer-blog">
+                                <span class="resources-list__icon"><svg focusable="false" aria-hidden="true"><use xlink:href="img/symbols.svg#blog"></use></svg></span>
+                                <span class="resources-list__text" lang="en">Developer Blog</span>
                             </a>
                         </li>
                         <li class="resources-list__item">
-                            <a href="https://www.youtube.com/channel/UCeU-_6YHGQFcVSHLbEXLNlA/playlists" target="_blank" rel="nofollow noopener noreferrer" data-id="video-guides">
-                                <img class="icon" src="img/video-guides.svg" alt="Video Guides">
-                                <span>Video Guides</span>
+                            <a href="https://www.youtube.com/channel/UCeU-_6YHGQFcVSHLbEXLNlA/playlists" target="_blank" rel="noopener noreferrer" data-id="video-guides">
+                                <span class="resources-list__icon"><svg focusable="false" aria-hidden="true"><use xlink:href="img/symbols.svg#video"></use></svg></span>
+                                <span class="resources-list__text" lang="en">Video Guides</span>
                             </a>
                         </li>
                         <li class="resources-list__item">
-                            <a href="https://www.facebook.com/Plesk" target="_blank" rel="nofollow noopener noreferrer" data-id="facebook">
-                                <img class="icon" src="img/facebook.svg" alt="Facebook">
-                                <span>Facebook</span>
+                            <a href="https://www.facebook.com/Plesk" target="_blank" rel="noopener noreferrer" data-id="facebook">
+                                <span class="resources-list__icon"><svg focusable="false" aria-hidden="true"><use xlink:href="img/symbols.svg#facebook"></use></svg></span>
+                                <span class="resources-list__text" lang="en">Facebook</span>
                             </a>
                         </li>
                     </ul>
