@@ -135,7 +135,8 @@ ul {
     margin-block-end: 1.5rem;
 }
 
-.note {
+.note,
+p.header__message {
     text-align: center;
 }
 
