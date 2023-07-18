@@ -120,7 +120,7 @@ ul {
 .header__title,
 .header__message,
 .note {
-    max-inline-size: 826px;
+    max-inline-size: 900px;
     margin: auto;
 }
 
@@ -138,6 +138,10 @@ ul {
 .note,
 p.header__message {
     text-align: center;
+}
+
+.note__wp-guardian {
+    margin-block: 3rem 3rem;
 }
 
 .note__message-lead {

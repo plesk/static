@@ -31,14 +31,6 @@
                     <a href="{{domain_link}}" data-id="domain-link">{{domain_name}}</a>
                     by Plesk
                 </h1>
-                <div class="header__message">
-                    <p>If you are the website owner:</p>
-                    <ul>
-                        <li>Log in to Plesk to manage the website and its availability.</li>
-                        <li>Use File Manager to add the website's content.</li>
-                    </ul>
-                    <p>Unable to manage your website? Contact your service provider.</p>
-                </div>
 {{/domain_page}}
 {{^domain_page}}
                 <h1 class="header__title">Web Server's Default Page</h1>
@@ -48,15 +40,25 @@
                     You see this page because there is no Web site at this address.
                 </p>
 {{/domain_page}}
-{{#plesk_login}}
                 <div class="note">
+{{#plesk_login}}
                     <div class="note__message">
                         <p class="note__message-lead">Log in to Plesk to create websites and set up hosting</p>
                         <p>New to Plesk? <a class="note__link" href="https://support.plesk.com/hc/en-us/articles/213413369-How-to-log-in-to-Plesk-" target="_blank" rel="nofollow noopener noreferrer" data-id="howtologin">Learn how</a> to log in and start working with it.</p>
                     </div>
                     <a class="note__button" href="{{plesk_login}}" data-id="plesk-login">Log in to Plesk</a>
-                </div>
 {{/plesk_login}}
+{{#domain_page}}
+                    <div class="note__wp-guardian">
+                        If you are the service provider and you host WordPress sites outside of Plesk. Try <a href="https://wpguardian.io?utm_source=plesk_domain_default_page_js" target="_blank">WP Guardian</a> - it provides complete visibility into the health of your WordPress websites in one place and keeps them protected with flexible updates management.
+                    </div>
+{{/domain_page}}
+{{^domain_page}}
+                    <div class="note__wp-guardian">
+                        Do you host WordPress sites outside of Plesk? Try <a href="https://wpguardian.io?utm_source=plesk_server_default_page_js" target="_blank">WP Guardian</a> - it provides complete visibility into the health of your WordPress websites in one place and keeps them protected with flexible updates management.
+                    </div>
+{{/domain_page}}
+                </div>
             </div>
         </div>
     </header>
