@@ -16,6 +16,7 @@ const init = () => {
                 location.hostname +
                 (location.protocol === 'https:' ? ':8443' : ''),
             styles,
+            utm_campaign: __DOMAIN_PAGE__ ? 'plesk_site_default_page_js' : 'plesk_server_default_page_js',
         })
     );
 };
