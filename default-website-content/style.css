@@ -140,8 +140,33 @@ p.header__message {
     text-align: center;
 }
 
-.note__wp-guardian {
-    margin-block: 3rem 3rem;
+.note__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    max-inline-size: 1220px;
+    margin-block: 2rem;
+}
+
+.note__item {
+    background: rgba(31, 158, 207, 0.6);
+    border-radius: 0.5rem;
+    padding: 1rem 1.75rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+@media (min-width: 960px) {
+    .note__container {
+        flex-direction: row;
+    }
 }
 
 .note__message-lead {
