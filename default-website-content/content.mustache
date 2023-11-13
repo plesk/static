@@ -48,16 +48,30 @@
                     </div>
                     <a class="note__button" href="{{plesk_login}}?utm_campaign={{utm_campaign}}" data-id="plesk-login">Log in to Plesk</a>
 {{/plesk_login}}
-                    <div class="note__wp-guardian">
+                </div>
+                <div class="note__container">
 {{#domain_page}}
-                        If you are the service provider and you host WordPress sites outside of Plesk.
+                    <div class="note__item">
+                        <img src="img/sitejet.svg" width="76" height="76" alt="Sitejet"> 
+                        <span>   
+                            If you are a site owner, try <a target="_blank" data-id="sitejet-link" href="{{sitejet_promo_url}}">Sitejet Builder</a> - a free, beginner-friendly low code/no-code site builder and editor seamlessly integrated within the Plesk control panel. ​Design professional, conversion-driven websites in half the time.
+                        </span>
+                    </div>
+{{/domain_page}}
+                    <div class="note__item">
+                        <img src="img/wpg.svg" width="76" height="76" alt="WP Guardian">    
+                        <span>
+{{#domain_page}}
+                            If you are the service provider and you host WordPress sites outside of Plesk.
 {{/domain_page}}
 {{^domain_page}}
-                        Do you host WordPress sites outside of Plesk?
+                            Do you host WordPress sites outside of Plesk?
 {{/domain_page}}
-                        Try <a href="https://wpguardian.io?utm_campaign={{utm_campaign}}" target="_blank">WP Guardian</a> - it provides complete visibility into the health of your WordPress websites in one place and keeps them protected with flexible updates management.
+                            Try <a href="https://wpguardian.io?utm_campaign={{utm_campaign}}" target="_blank">WP Guardian</a> - it provides complete visibility into the health of your WordPress websites in one place and keeps them protected with flexible updates management.
+                        </span>
                     </div>
                 </div>
+              
             </div>
         </div>
     </header>

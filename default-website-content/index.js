@@ -11,6 +11,11 @@ const init = () => {
             domain_page: __DOMAIN_PAGE__,
             domain_name: location.hostname,
             domain_link: location.protocol + '//' + location.hostname,
+            sitejet_promo_url:   
+                'https://' +
+                location.hostname +
+                (location.protocol === 'https:' ? ':8443' : '') + 
+                '/modules/notifier/index.php/sitejet-promo',
             plesk_login:
                 'https://' +
                 location.hostname +
