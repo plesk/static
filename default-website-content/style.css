@@ -163,6 +163,26 @@ p.header__message {
     flex: 1;
 }
 
+.note__item-media {
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    inline-size: 72px;
+    block-size: 72px;
+    margin-inline-end: 4px;
+    margin-block-end: 4px;
+    background-color: #fff;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 #1f9ecf;
+}
+
+.note__item-media > img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
 @media (min-width: 960px) {
     .note__container {
         flex-direction: row;
