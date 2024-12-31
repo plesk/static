@@ -1,4 +1,4 @@
-// Copyright 1999-2024. WebPros International GmbH. All rights reserved.
+// Copyright 1999-2025. WebPros International GmbH. All rights reserved.
 
 import Firehose from 'aws-sdk/clients/firehose';
 
