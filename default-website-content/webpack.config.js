@@ -8,7 +8,7 @@ const getPublicPath = env => env.production
     : 'http://localhost:8080/public/';
 
 module.exports = env => (['default-website-index', 'default-server-index'].map(entry => ({
-    mode: 'none',
+    mode: env.production ? 'production' : 'development',
     entry: {
         [entry]: './index.js',
         'bundle': './content.js',
