@@ -8,7 +8,7 @@ const getPublicPath = env => env.production
     : 'http://localhost:8080/public/';
 
 module.exports = env => (['default-website-index', 'default-server-index'].map(entry => ({
-    mode: env.production ? 'production' : 'development',
+    mode: 'none',
     entry: {
         [entry]: './index.js',
         'bundle': './content.js',
@@ -64,7 +64,7 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
             {
                 test: /\.css$/,
                 use: [
-                    'css-loader',
+                    'css-loader'
                 ],
             },
         ],
