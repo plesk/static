@@ -1,6 +1,6 @@
 // Copyright 1999-2025. WebPros International GmbH. All rights reserved.
 
-import Firehose from 'aws-sdk/clients/firehose';
+import { Firehose } from '@aws-sdk/client-firehose';
 
 if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector;
