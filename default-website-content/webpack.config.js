@@ -8,7 +8,7 @@ const getPublicPath = env => env.production
     : 'http://localhost:8080/public/';
 
 module.exports = env => (['default-website-index', 'default-server-index'].map(entry => ({
-    mode: 'none',
+    mode: env.production ? 'production' : 'development',
     entry: {
         [entry]: './index.js',
         'bundle': './content.js',
@@ -52,6 +52,20 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
                 exclude: /node_modules/,
                 use: {
                     loader: 'html-loader',
+                    options: {
+                        minimize: {
+                            caseSensitive: true,
+                            collapseWhitespace: true,
+                            conservativeCollapse: true,
+                            keepClosingSlash: true,
+                            minifyCSS: false,
+                            minifyJS: false,
+                            removeComments: true,
+                            removeRedundantAttributes: true,
+                            removeScriptTypeAttributes: true,
+                            removeStyleLinkTypeAttributes: true,
+                        },
+                    },
                 },
             },
             {
@@ -64,7 +78,7 @@ module.exports = env => (['default-website-index', 'default-server-index'].map(e
             {
                 test: /\.css$/,
                 use: [
-                    'css-loader'
+                    'css-loader',
                 ],
             },
         ],
